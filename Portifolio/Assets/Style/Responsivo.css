@@ -1,0 +1,47 @@
+@media only screen and (max-width: 900px) {
+    section.TopMenuBanner {
+        height: 500px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    section.TopMenuBanner header span i#BtnOpenSocialMobile {
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+    section.TopMenuBanner header span i#Itag,
+    section.TopMenuBanner header span h4 {
+        display: none;
+    }
+    section.BannerSlider {
+        flex-wrap: wrap;
+    }
+    section.BannerSlider #PrintImageBanner {
+        margin-top: -80px;
+        width: 100%;
+        height: 300px;
+    }
+    section.BannerSlider #PrintImageBanner section {
+        display: none;
+    }
+    section.BannerSlider #PrintImageBanner section div {
+        background: #333;
+    }
+    section.BannerSlider #Right {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+    section.TemasProjetos {
+        gap: 40px;
+        padding-left: 20px;
+        margin-top: 20px;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    section.TemasProjetos .CardTemaProjetos {
+        flex: 0 0 calc(100% / 2);
+        scroll-snap-align: center;
+    }
+}

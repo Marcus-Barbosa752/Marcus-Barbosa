@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: #333;
+    height: 100vh;
+    overflow-x: hidden;
+}
+section.TopMenuBanner {
+    position: relative;
+    height: 420px;
+    width: 100vw;
+    background: black;
+    box-shadow: 0 8px 10px black;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+}
+section.TopMenuBanner header {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 40px;
+}
+section.TopMenuBanner header span {
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+section.TopMenuBanner header span i#BtnOpenSocialMobile {display: none;}
+section.TopMenuBanner header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    background: #333;
+    padding: 10px;
+    border-radius: 15px;
+}
+section.TopMenuBanner header ul li {
+    padding: 5px;
+    border-radius: inherit;
+}
+section.TopMenuBanner header ul li:hover {
+    cursor: pointer;
+    color: black;
+    background: white;
+    box-shadow: 0 0 5px black;
+}
+section.TopMenuBanner header ul .IndicatoSession {
+    position: absolute;
+    bottom: 5px;
+    left: 32px;
+    width: 23px;
+    height: 3px;
+    background: white;
+    border-radius: 10px;
+}
+section.TopMenuBanner .ContainerSocial {
+    position: absolute;
+    background: white;
+    z-index: 1;
+    width: auto;
+    height: 0;
+    top: 80px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+}
+section.TopMenuBanner .ContainerSocial.Open {
+    animation: OpenSocialContainer .2s ease-in-out;
+    padding: 10px;
+    height: auto;
+}
+@keyframes OpenSocialContainer {
+    0% {
+        padding: 0;
+        height: 0;
+    }
+    100% {
+        padding: 15px;
+        height: auto;
+    }
+}
+section.TopMenuBanner .ContainerSocial a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+section.TopMenuBanner .ContainerSocial a:hover {
+    background: #333;
+    color: white;
+}
+section.TopMenuBanner .ContainerSocial a img {
+    width: 40px;
+}
+section.TopMenuBanner .BannerSlider {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+section.TopMenuBanner .BannerSlider .Left {
+    width: 90%;
+    height: 300px;  
+    background: #333;
+    box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.592);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 20px;
+    font-weight: bold;
+}
+section.TopMenuBanner .BannerSlider .Left p {
+    font-size: 30px;
+    color: white;
+}
+section.TopMenuBanner .BannerSlider .Left section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.TopMenuBanner .BannerSlider .Left section h4 {
+    color: white;
+    font-weight: normal;
+    width: 50%;
+    line-height: 30px;
+}
+section.TopMenuBanner .BannerSlider .Left section div {
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+section.TopMenuBanner .BannerSlider .Left section div button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+section.TopMenuBanner .BannerSlider .Left section div button:hover {
+    color: #333;
+}
+section.TopMenuBanner .BannerSlider .Right {
+    width: 100px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+}
+section.TopMenuBanner .BannerSlider .Right::-webkit-scrollbar {width: 0;}
+section.TopMenuBanner .BannerSlider .Right .CardBannerProxImage {
+    width: 100%;
+    height: calc(100% / 4);
+    background: #333;
+    border-radius: 10px;
+    cursor: pointer;
+}
+section.TemasProjetos {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+section.TemasProjetos .CardTemaProjetos {
+    position: relative;
+    width: 150px;
+    height: 160px;
+    background: url('../Images/Jogos.jpg'), black;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px black,
+                -4px -4px 10px white;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(255, 255, 255, 0.149));
+    cursor: pointer;
+}
+section.TemasProjetos .CardTemaProjetos:hover {
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(255, 255, 255, 0.479));
+}
+section.TemasProjetos .CardTemaProjetos::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.551);
+    border-radius: inherit;
+}
+section.TemasProjetos .CardTemaProjetos h4,
+section.TemasProjetos .CardTemaProjetos button {
+    position: absolute;
+    z-index: 1;
+}
+section.TemasProjetos .CardTemaProjetos h4 {
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 17px;
+}
+section.TemasProjetos .CardTemaProjetos button {
+    bottom: -20px;
+    right: -10px;
+    border: none;
+    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    background: #333;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+section.TemasProjetos .CardTemaProjetos button:hover {
+    border-radius: 15px;
+    width: 105px;
+}
+section.TemasProjetos .CardTemaProjetos button a {
+    font-weight: bold;
+    transform: translateX(-80px);
+    color: white;
+    text-decoration: none;
+}
+section.TemasProjetos .CardTemaProjetos button:hover a {
+    transform: translateX(10px);
+}
+section.TemasProjetos .CardTemaProjetos button i {
+    transform: translateX(-52px);
+    font-size: 20px;
+    color: white;
+}
+section.TemasProjetos .CardTemaProjetos button:hover i {
+    transform: translateX(15px);
+}
