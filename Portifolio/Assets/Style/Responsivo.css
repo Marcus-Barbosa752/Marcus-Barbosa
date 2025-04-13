@@ -60,9 +60,9 @@
     section.MinhasTecnologias section.PrintCardsMinhasTecnologias section:nth-child(3) {
         margin-top: -145px;
     }
-    section.MinhasTecnologias .PrintMinhasTecnologias {
-        margin-left: 190px;
-        gap: 70px;
+    section.MinhasTecnologias section.PrintCardsMinhasTecnologias .PrintMinhasTecnologias {
+        flex: 0 0 80%;
+        margin-left: 200px;
     }
     section.MinhasTecnologias .PrintMinhasTecnologias section .CardMinhasTecnologias img {
         width: 40px;
