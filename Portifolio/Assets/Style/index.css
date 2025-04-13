@@ -66,6 +66,7 @@ section.TopMenuBanner header ul .IndicatoSession {
     height: 3px;
     background: white;
     border-radius: 10px;
+    transition: .2s ease-in-out;
 }
 section.TopMenuBanner .ContainerSocial {
     position: absolute;
