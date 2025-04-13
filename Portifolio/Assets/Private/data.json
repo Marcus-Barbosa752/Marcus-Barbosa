@@ -1,0 +1,27 @@
+[
+    {
+        "Src": "Assets/Images/Banner_Um.jpg",
+        "Title": "Image um",
+        "Description": "Lorem image 1"
+    },
+    {
+        "Src": "Assets/Images/Banner_Dois.jpg",
+        "Title": "Image dois",
+        "Description": "Lorem image 2"
+    },
+    {
+        "Src": "Assets/Images/Banner_Trez.jpg",
+        "Title": "Image trez",
+        "Description": "Lorem image 3"
+    },
+    {
+        "Src": "Assets/Images/Banner_Dois.jpg",
+        "Title": "Image quantro",
+        "Description": "Lorem image 4"
+    },
+    {
+        "Src": "Assets/Images/Banner_Cinco.jpg",
+        "Title": "Image cinco",
+        "Description": "Lorem image 5"
+    }
+]
