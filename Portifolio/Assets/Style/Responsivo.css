@@ -63,6 +63,7 @@
     section.MinhasTecnologias .PrintMinhasTecnologias {
         margin-left: 190px;
         gap: 70px;
+        overflow-x: auto;
     }
     section.MinhasTecnologias .PrintMinhasTecnologias section .CardMinhasTecnologias img {
         width: 40px;
