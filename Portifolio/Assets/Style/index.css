@@ -11,6 +11,13 @@ body {
     height: 100vh;
     overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+  width: 12px;               
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+    border-radius: 10px;
+}
 section.TopMenuBanner {
     position: relative;
     height: 420px;
