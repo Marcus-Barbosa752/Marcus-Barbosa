@@ -110,7 +110,7 @@ const CreateCardCatergoria = (Titulo, Link, Fundo) => {
     const Card = `
     <div class="CardTemaProjetos" style="background: url(${Fundo}); background-position: center; background-size: cover;">
         <h4>${Titulo}</h4>
-        <button><a href=f"${Link}" target="_blank">Acessar</a><i class="fa-solid fa-caret-right"></i></button>
+        <button><a href="${Link}" target="_blank">Acessar</a><i class="fa-solid fa-caret-right"></i></button>
     </div>
     `
 
