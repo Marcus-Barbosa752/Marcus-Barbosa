@@ -81,7 +81,7 @@ const TemasProjetos = document.querySelector('.TemasProjetos')
 const ListaCategoria = [
     {
         Nome: 'E-commerce',
-        Link: 'https://www.youtube.com',
+        Link: 'https://www.wix.com',
         Background: 'Assets/Images/E-commerce.jpg'
     },
     {
@@ -91,17 +91,17 @@ const ListaCategoria = [
     },
     {
         Nome: 'Player',
-        Link: 'https://www.youtube.com',
+        Link: "https://www.google.com",
         Background: 'Assets/Images/Player.png'
     },
     {
         Nome: 'Jogos',
-        Link: 'https://www.youtube.com',
+        Link: 'https://www.fronteditor.dev/',
         Background: 'Assets/Images/Jogos.jpg'
     },
     {
         Nome: 'Outros',
-        Link: 'https://www.youtube.com',
+        Link: 'Assets/Page/Cotacao/Index.html',
         Background: 'Assets/Images/Outros.jpeg'
     }
 ]
