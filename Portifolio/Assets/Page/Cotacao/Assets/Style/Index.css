@@ -121,3 +121,8 @@ section.Root section.Result .ResultInfo div {
     justify-content: space-between;
     align-items: center;
 }
+@media only screen and (max-width: 412px) {
+    section.Root {
+        width: 90vw;
+    }
+}
