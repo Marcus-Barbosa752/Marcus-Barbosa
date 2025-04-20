@@ -231,6 +231,7 @@ function Clean() {
 
     SpanResultCalcMoedas.textContent = '00'
     SpanPreviaCalcMoedas.textContent = '00+00'
+    SpanMoedaPadrao.textContent = '00.00'
 }
 
 function BackSpace() {
