@@ -121,6 +121,144 @@ section.Root section.Result .ResultInfo div {
     justify-content: space-between;
     align-items: center;
 }
+section.CalcMoedas {
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+}
+section.CalcMoedas .Visor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+section.CalcMoedas .Visor .Left {
+    padding-left: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.CalcMoedas .Visor .Left span:nth-child(1) {
+    font-size: 50px;
+}
+section.CalcMoedas .Visor .Left span:nth-child(2) {
+    font-size: 20px;
+}
+section.CalcMoedas .Visor .Right {
+    padding-right: 20px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+section.CalcMoedas .Visor .Right span {
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 4px 4px 10px black, inset 4px 4px 10px white;
+}
+section.CalcMoedas .InputsCalc {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: auto;
+}
+section.CalcMoedas .InputsCalc input {
+    background: black;
+    color: white;
+    width: calc(100% / 2);
+    text-align: center;
+    font-size: 15px;
+}
+section.CalcMoedas .InputsCalc input::placeholder {color: white;}
+section.CalcMoedas .InputsCalc i {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: black;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    color: white;
+}
+section.CalcMoedas .InputsCalc i:hover {
+    box-shadow: 4px 4px 10px black, inset 4px 4px 10px white;
+}
+section.CalcMoedas .InputsCalc i:active {
+    transition: .4s ease-in-out;
+    transform: rotate(1turn);
+    box-shadow: none;
+}
+section.CalcMoedas section.SubTecladoCal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px;
+}
+section.CalcMoedas section.SubTecladoCal button {
+    width: calc(100% / 3);
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+section.CalcMoedas section.SubTecladoCal button:hover {
+    background: black;
+    color: white;
+}
+section.CalcMoedas section.TecladoCalc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+section.CalcMoedas section.TecladoCalc div {
+    width: 100%;
+    height: calc(100% / 4);
+    display: flex;
+}
+section.CalcMoedas section.TecladoCalc div button {
+    width: calc(100% / 4);
+    height: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+section.CalcMoedas section.TecladoCalc div button:hover {
+    background: black;
+    color: white;
+}
+section.CalcMoedas i#BtnBackHome {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+section.CalcMoedas i#BtnBackHome:hover {
+    box-shadow: 4px 4px 10px black, inset 4px 4px 10px white;
+}
 @media only screen and (max-width: 412px) {
     section.Root {
         width: 90vw;
