@@ -81,25 +81,34 @@ const TemasProjetos = document.querySelector('.TemasProjetos')
 const ListaCategoria = [
     {
         Nome: 'E-commerce',
-        Link: 'https://www.youtube.com'
+        Link: 'https://www.youtube.com',
+        Background: 'Assets/Images/E-commerce.jpg'
     },
     {
         Nome: 'Movie',
-        Link: 'https://www.youtube.com'
+        Link: 'https://www.youtube.com',
+        Background: 'Assets/Images/Movie.jpg'
     },
     {
         Nome: 'Player',
-        Link: 'https://www.youtube.com'
+        Link: 'https://www.youtube.com',
+        Background: 'Assets/Images/Player.png'
     },
     {
         Nome: 'Jogos',
-        Link: 'https://www.youtube.com'
+        Link: 'https://www.youtube.com',
+        Background: 'Assets/Images/Jogos.jpg'
     },
+    {
+        Nome: 'Outros',
+        Link: 'https://www.youtube.com',
+        Background: 'Assets/Images/Outros.jpeg'
+    }
 ]
 
-const CreateCardCatergoria = (Titulo, Link) => {
+const CreateCardCatergoria = (Titulo, Link, Fundo) => {
     const Card = `
-    <div class="CardTemaProjetos">
+    <div class="CardTemaProjetos" style="background: url(${Fundo}); background-position: center; background-size: cover;">
         <h4>${Titulo}</h4>
         <button><a href=f"${Link}" target="_blank">Acessar</a><i class="fa-solid fa-caret-right"></i></button>
     </div>
@@ -109,7 +118,7 @@ const CreateCardCatergoria = (Titulo, Link) => {
 }
 
 for (let i = 0; i < ListaCategoria.length; i++) {
-    CreateCardCatergoria(ListaCategoria[i].Nome, ListaCategoria[i].Link)
+    CreateCardCatergoria(ListaCategoria[i].Nome, ListaCategoria[i].Link, ListaCategoria[i].Background)
 }
 
 // Minhas tecnologias
@@ -122,10 +131,10 @@ const BgMinhasTecnologias = [
     'Assets/Images/Minhas tecnologias/Quatro.gif'
 ]
 
-const Apl = () => {
+const RandomBgMyTech = () => {
     const BgRandom = BgMinhasTecnologias[Math.floor(Math.random() * BgMinhasTecnologias.length)]
     MinhasTecnologias.style.background = `url('${BgRandom}'), #444`
     MinhasTecnologias.style.backgroundPosition = 'center'
     MinhasTecnologias.style.backgroundSize = 'cover'
 }
-Apl()
+RandomBgMyTech()
