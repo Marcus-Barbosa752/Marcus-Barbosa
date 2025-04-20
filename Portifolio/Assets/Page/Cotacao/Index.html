@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cotação de moedas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="Assets/Style/Index.css">
+    <link rel="shortcut icon" href="Assets/Icon/exchange.png" type="image/x-icon">
 </head>
 <body>
 
@@ -49,8 +52,9 @@
         <option value="RSD">Dinar Sérvio (RSD)</option>
         <option value="BGN">Lev Búlgaro (BGN)</option>
     </datalist>
-    
+
     <section class="Root">
+        <!-- Comparação de moedas -->
         <form id="Form">
             <input type="text" id="InputMoedaUm" placeholder="1 Moeda" list="MoedasLista" autocomplete="off">
             <i class="fa-solid fa-coins"></i>
@@ -62,17 +66,77 @@
             </div>
         </form>
 
+        <!-- Resultado da comparação -->
         <section class="Result" id="Result">
             <div class="PrintValorAtual">
                 <span id="SpanPrintValorAtual">00.00</span>
             </div>
 
             <button id="BtnBackCotacao"><i class="fa-solid fa-angle-left"></i>Voltar</button>
-            
+
             <div class="ResultInfo" id="ResultInfo"></div>
+        </section>
+
+        <!-- Calculadora de moedas -->
+        <section class="CalcMoedas" id="CalcMoedas">
+            <i id="BtnBackHome" class="fa-solid fa-angle-left"></i>
+
+            <div class="Visor">
+                <div class="Left">
+                    <span id="SpanResultCalcMoedas">00</span>
+                    <span id="SpanPreviaCalcMoedas">00+00</span>
+                </div>
+
+                <div class="Right">
+                    <span id="SpanMoedaPadrao">00.00</span>
+                </div>
+            </div>
+
+            <form class="InputsCalc">
+                <input type="text" id="InputMoedaUmCalc" placeholder="EX: BRL" list="MoedasLista">
+                <i id="BtnReverterMoeda" class="fa-solid fa-repeat"></i>
+                <input type="text" id="InputMoedaDoisCalc" placeholder="EX: USD" list="MoedasLista">
+            </form>
+
+            <section class="SubTecladoCal">
+                <button onclick="Clean()">C</button>
+                <button onclick="Pocentagem()">%</button>
+                <button onclick="BackSpace()"><i class="fa-solid fa-delete-left"></i></button>
+            </section>
+
+            <section class="TecladoCalc">
+                <div>
+                    <button onclick="Insert('7')">7</button>
+                    <button onclick="Insert('8')">8</button>
+                    <button onclick="Insert('9')">9</button>
+                    <button onclick="Insert('x')">x</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('4')">4</button>
+                    <button onclick="Insert('5')">5</button>
+                    <button onclick="Insert('6')">6</button>
+                    <button onclick="Insert('-')">-</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('1')">1</button>
+                    <button onclick="Insert('2')">2</button>
+                    <button onclick="Insert('3')">3</button>
+                    <button onclick="Insert('+')">+</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('0')">0</button>
+                    <button onclick="Insert('00')">00</button>
+                    <button onclick="Insert('.')">.</button>
+                    <button onclick="Calc()">=</button>
+                </div>
+            </section>
         </section>
     </section>
 
     <script src="Assets/Javascript/Index.js"></script>
 </body>
+
 </html>
