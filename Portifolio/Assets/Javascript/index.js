@@ -138,3 +138,21 @@ const RandomBgMyTech = () => {
     MinhasTecnologias.style.backgroundSize = 'cover'
 }
 RandomBgMyTech()
+
+// Projetos
+const BtnToggleGridProjetos = document.getElementById('BtnToggleGridProjetos')
+const CardProjetos = document.querySelectorAll('.CardProjetos')
+
+BtnToggleGridProjetos.onclick = () => {
+    BtnToggleGridProjetos.style.transition = '.4s ease-in-out'
+    if (BtnToggleGridProjetos.style.transform != "rotate(90deg)") {
+        BtnToggleGridProjetos.style.transform = "rotate(90deg)"
+    }else {
+        BtnToggleGridProjetos.style.transform = "rotate(0deg)"
+    }
+
+    CardProjetos.forEach(Card => {
+        Card.classList.toggle('CardCollunm')
+        console.log(Card.style.background)
+    })
+}
