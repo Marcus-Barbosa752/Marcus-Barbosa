@@ -4,10 +4,26 @@ const LiSobre = document.getElementById('LiSobre')
 const IndicatoSession = document.getElementById('IndicatoSession')
 
 const Projetos = document.getElementById("Projetos")
+// const Sobre = document.getElementById("Sobre")
 
 let InitialIndicator = 32
 
-function setIndicatorEvents(element, position, section) {
+function OpenSession(position) {
+    switch (position) {
+        case 32:
+            Projetos.style.height = '0px'
+            // Sobre.style.height = '0px'
+            break
+        case 130:
+            Projetos.style.height = 'calc(100vh + 98%)'
+            break
+        /*case 230:
+            Sobre.style.height = 'calc(100vh + 98%)'
+            break*/
+    }
+}
+
+function setIndicatorEvents(element, position) {
     element.onmouseover = () => {
         IndicatoSession.style.left = `${position}px`
     }
@@ -17,16 +33,7 @@ function setIndicatorEvents(element, position, section) {
     element.onclick = () => {
         InitialIndicator = position
         IndicatoSession.style.left = `${InitialIndicator}px`
-
-        if (section == "Home") {
-            Projetos.style.height = '0px'
-            return
-        }
-
-        if (section == "Projetos") {
-            Projetos.style.height = 'calc(100vh + 98%)'
-            return
-        }
+        OpenSession(position)
     }
 }
 
