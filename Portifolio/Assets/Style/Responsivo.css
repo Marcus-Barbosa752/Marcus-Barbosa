@@ -68,4 +68,39 @@
     section.MinhasTecnologias .PrintMinhasTecnologias section .CardMinhasTecnologias img {
         width: 40px;
     }
+    section.Projetos header #Left input {
+        width: 180px;
+    }
+    section.Projetos .PrintCardsProjetos {
+        padding: 20px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos {
+        width: 100%;
+        height: calc(100% / 3.8);
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos h4 {
+        font-size: 17px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos nav {
+        margin-top: 10px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos nav button {
+        font-size: 20px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm {
+        height: calc(100% / 10);
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm img {
+        width: 155px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm h4 {
+        font-size: 17px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm nav {
+        width: 170px;
+        right: -77px;
+    }
+    section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm nav button {
+        font-size: 15px;
+    }
 }
