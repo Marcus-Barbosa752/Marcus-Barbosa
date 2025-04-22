@@ -1,4 +1,5 @@
 import { CarregarProdutos } from "./Produtos.js"
+import { CreateIframePdf } from "./CarregaPdf.js"
 
 const BtnOpenSocial = document.getElementById('BtnOpenSocial')
 const ContainerSocial = document.getElementById('ContainerSocial')
@@ -9,7 +10,7 @@ BtnOpenSocial.onclick = () => {
 
     if (Itag.style.transform != 'rotate(180deg)') {
         Itag.style.transform = 'rotate(180deg)'
-    }else {
+    } else {
         Itag.style.transform = 'rotate(0deg)'
     }
 
@@ -147,7 +148,7 @@ BtnToggleGridProjetos.onclick = () => {
     BtnToggleGridProjetos.style.transition = '.4s ease-in-out'
     if (BtnToggleGridProjetos.style.transform != "rotate(90deg)") {
         BtnToggleGridProjetos.style.transform = "rotate(90deg)"
-    }else {
+    } else {
         BtnToggleGridProjetos.style.transform = "rotate(0deg)"
     }
 
@@ -155,4 +156,171 @@ BtnToggleGridProjetos.onclick = () => {
         Card.classList.toggle('CardCollunm')
         console.log(Card.style.background)
     })
+}
+
+// Sobre - Carregar pdf
+const BtnMarcusSobre = document.getElementById('BtnMarcusSobre')
+const BtnCurriculoSobre = document.getElementById('BtnCurriculoSobre')
+const ProjetosDaTechSobre = document.getElementById('ProjetosDaTechSobre')
+const IndicatoSessionSobre = document.getElementById('IndicatoSessionSobre')
+
+const PrintResSobre = document.getElementById('PrintResSobre')
+
+const LinkPdf = 'Assets/Curriculo/Currículo_Pt-BR.pdf'
+
+BtnMarcusSobre.onclick = () => {
+    PrintResSobre.innerHTML = ''
+    PrintResSobre.innerHTML = "Marcus detalhes"
+    IndicatoSessionSobre.style.left = "13px"
+}
+
+ProjetosDaTechSobre.onclick = () => {
+    const Card = `
+    <div class="ProjetosDasTecnologias">
+        <div class="Card">
+            <img src="Assets/Images/Python.png" alt="">
+            <section> <!-- Colocar Mais projetos na section -->
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/task.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/play.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="Card">
+            <img src="Assets/Images/Cpp.png" alt="">
+            <section> <!-- Colocar Mais projetos na section -->
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/task.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/play.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="Card">
+            <img src="Assets/Images/Js.png" alt="">
+            <section> <!-- Colocar Mais projetos na section -->
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/task.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/play.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="Card">
+            <img src="Assets/Images/Java.png" alt="">
+            <section> <!-- Colocar Mais projetos na section -->
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/task.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+
+                <div class="Rigth">
+                    <img src="Assets/Images/Icon/play.png" alt="">
+                    <div class="Info">
+                        <h4>To-do list</h4>
+                        <h4>10/10/1010</h4>
+                    </div>
+
+                    <div class="Controls">
+                        <button>Github</button>
+                        <button>Baixar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Colocar mais cards de projetos na section -->
+    </div>
+    `
+
+    PrintResSobre.innerHTML = ''
+    PrintResSobre.innerHTML = Card
+
+    if (innerWidth <= 900) {
+        IndicatoSessionSobre.style.left = "250px"
+        return
+    }
+
+    IndicatoSessionSobre.style.left = "650px"
+}
+
+BtnCurriculoSobre.onclick = () => {
+    CreateIframePdf(LinkPdf, PrintResSobre)
+    if (innerWidth <= 900) {
+        IndicatoSessionSobre.style.left = "105px"
+        return
+    }
+    IndicatoSessionSobre.style.left = "307px"
 }
