@@ -502,3 +502,205 @@ section.Projetos .PrintCardsProjetos .CardProjetos nav button::after {
 section.Projetos .PrintCardsProjetos .CardProjetos nav button:hover::after {
     width: 100%;
 }
+section.Sobre {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100vw;
+    background: var(--Bg-Image-Padrao), #333;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: .4s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+section.Sobre .Left,
+section.Sobre .Right {
+    height: 100%;
+    padding-top: 90px;
+}
+section.Sobre .Left {
+    width: 26%;
+}
+section.Sobre .Left .frame {
+    width: 160px;
+    height: 160px;
+    border: 8px solid silver;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -700px;
+    margin-left: 50px;
+}
+section.Sobre .Left .inner {
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}
+section.Sobre .Left .inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+section.Sobre .Left .PreviaDetails {
+    position: relative;
+    padding: 10px;
+    width: 290px;
+    height: auto;
+    background: linear-gradient(45deg, #D9D9D9, #242424);
+    border-radius: 10px;
+    margin-top: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.Sobre .Left .PreviaDetails button {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border: none;
+    background: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    display: grid;
+    place-items: center;
+}
+section.Sobre .Left .PreviaDetails button:hover {
+    background: white;
+    color: black;
+}
+section.Sobre .Left .PreviaDetails .CardPreviaDetails {
+    border-left: solid black 2px;
+    padding-left: 10px;
+}
+section.Sobre .Right {
+    width: calc(100% - 26%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+section.Sobre .Right nav {
+    position: relative;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: white;
+}
+section.Sobre .Right nav .IndicatoSessionSobre {
+    position: absolute;
+    bottom: 4px;
+    left: 13px;
+    width: 50px;
+    height: 3px;
+    background: black;
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+}
+section.Sobre .Right nav button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+section.Sobre .Right .PrintResSobre {
+    width: 95%;
+    height: 95%;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+section.Sobre .Right .PrintResSobre embed {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card section {
+    display: flex;
+    gap: 10px;
+    width: 830px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card img {
+    width: 70px;
+    height: 70px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to bottom, #333333, #999999);
+    padding: 10px;
+    border-radius: 10px;
+    width: 190px;
+    height: 90px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth img {
+    width: 50px;
+    height: 50px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth .Info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth .Info h4 {
+    font-size: 20px;
+    color: white;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth .Info h4:nth-child(2) {
+    font-size: 15px;
+    font-weight: normal;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Controls {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 10px;
+    background: black;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid white 3px;
+}
+section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
