@@ -103,4 +103,29 @@
     section.Projetos .PrintCardsProjetos .CardProjetos.CardCollunm nav button {
         font-size: 15px;
     }
+    section.Sobre .Left {
+        margin-top: -150px;
+    }
+    section.Sobre .Left .frame {
+        margin-left: 75px;
+    }
+    section.Sobre .Left .PreviaDetails {
+        margin-left: 20px;
+    }
+    section.Sobre .Right {
+        position: absolute;
+        width: 100vw;
+        top: 60vh;
+    }
+    section.Sobre .Right nav {
+        width: 100%;
+    }
+    section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card section {
+        width: 262px;
+        height: 120px;
+        overflow-x: scroll;
+    }
+    section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth {
+        flex: 0 0 200px;
+    }
 }
