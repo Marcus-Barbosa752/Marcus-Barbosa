@@ -124,8 +124,10 @@
         width: 220px;
         height: 120px;
         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
     }
     section.Sobre .Right .PrintResSobre .ProjetosDasTecnologias .Card .Rigth {
         flex: 0 0 200px;
+        scroll-snap-align: center;
     }
 }
