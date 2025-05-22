@@ -166,7 +166,7 @@ const IndicatoSessionSobre = document.getElementById('IndicatoSessionSobre')
 
 const PrintResSobre = document.getElementById('PrintResSobre')
 
-const LinkPdf = 'Assets/Curriculo/Currículo_Pt-BR.pdf'
+const LinkPdf = '/Assets/Curriculo/curriculo_marcus_barbosa_ptbr.pdf'
 
 BtnMarcusSobre.onclick = () => {
     PrintResSobre.innerHTML = ''
