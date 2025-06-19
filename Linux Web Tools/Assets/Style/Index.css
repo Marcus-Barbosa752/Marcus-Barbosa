@@ -1,0 +1,275 @@
+body {
+    background: #333;
+    height: 100vh;
+    overflow: hidden;
+}
+section.AreaDeTrabalho {
+    position: relative;
+    background: url("../Images/Wallpapers/AnonymusUm") center/cover no-repeat, black;
+    height: 100vh;
+    overflow: auto;
+}
+section.AreaDeTrabalho .CardTools {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.315);
+}
+section.AreaDeTrabalho .CardTools:hover {
+    background: rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(5px);
+    color: black;
+    box-shadow: 0 0 10px black;
+}
+section.AreaDeTrabalho .CardTools img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+section.AreaDeTrabalho .CardTools.dragging {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+section.NavBarTasks {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.623);
+    backdrop-filter: blur(6px);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    padding-left: 10px;
+}
+section.NavBarTasks .Left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+section.NavBarTasks .Left button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    display: grid;
+    grid-template-columns: repeat(2, 10px);
+    grid-template-rows: repeat(2, 10px);
+    grid-gap: 3px;
+    padding: 6px;
+    border-radius: 10px;
+}
+section.NavBarTasks .Left button:hover {
+    background: black;
+    animation: GridAnimation 1s linear infinite;    
+}
+@keyframes GridAnimation {
+    0% {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    100% {
+        grid-template-columns: repeat(2, 10px);
+        grid-template-rows: repeat(2, 10px);
+    }
+}
+section.NavBarTasks .Left button span {
+    background: white;
+    border-radius: 2px;
+}
+section.NavBarTasks .Left .InsertToolsTaskBar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+section.NavBarTasks .Left .InsertToolsTaskBar .CardToolsTaskBar {
+    cursor: pointer;
+    width: 50px;
+    height: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+section.NavBarTasks .Left .InsertToolsTaskBar .CardToolsTaskBar:hover {
+    border-bottom: solid white 2px;
+    background: rgba(255, 255, 255, 0.493);
+    backdrop-filter: blur(5px);
+}
+section.NavBarTasks .Left .InsertToolsTaskBar .CardToolsTaskBar img {
+    width: 30px;
+}
+section.NavBarTasks .Right {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section.NavBarTasks .Right span {
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+section.NavBarTasks .Right span#SpanHoursDate:hover {
+    backdrop-filter: blur(10px);
+    background-color: r3ed;
+}
+section.NavBarTasks .Right span:hover:nth-child(2) {
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+section.NavBarTasks .Right button {
+    height: 100%;
+    width: 7px;
+    border: none;
+    background: none;
+    backdrop-filter: blur(10px);
+    transform: translateX(10px);
+}
+section.NavBarTasks .Right button:hover {
+    background: rgba(255, 255, 255, 0.39);
+}
+section.Archives {
+    position: absolute;
+    top: var(--Position-Window-Float-Padrao);
+    left: var(--Position-Window-Float-Padrao);
+    background: var(--Background-Window-Float-Padra);
+    border-radius: var(--Border-Radius-Window-Padrao);
+    width: var(--Width-Window-Float-Padrao);
+    height: var(--Height-Window-Float-Padrao);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: none;
+}
+section.Archives header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+section.Archives header .Left,
+section.Archives header .Meio, 
+section.Archives header .Right{
+    height: 100%;
+}
+section.Archives header .Left nav button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+section.Archives header .Meio .CardSerch {
+    width: 100%;
+    position: relative;
+}
+section.Archives header .Meio .CardSerch input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: white;
+}
+section.Archives header .Right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+section.Archives header .Right button {
+    border: none;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+section.Archives section#AcoesArchive {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+section.Archives section#AcoesArchive .Left,
+section.Archives section#AcoesArchive .Right {
+    padding: 10px;
+}
+section.Archives section#AcoesArchive .Left nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.Archives section#AcoesArchive .Left nav .Files {
+    display: grid;
+    grid-template-rows: repeat(3, 30px);
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 10px;
+    border-top: solid rgba(255, 255, 255, 0.493) 1px;
+    padding-top: 10px;
+}
+section.Archives section .Left nav button {
+    border: none;
+    background: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+}
+section.Archives header .Left nav button:hover,
+section.Archives header .Right button:hover,
+section.Archives section .Left nav button:hover,
+section.Archives section .Left nav button.ActiveBtnArchive {
+    background: rgba(255, 255, 255, 0.493);
+    color: black;
+    box-shadow: 0 0 10px black;
+}
+section.Archives section .Right {
+    border-left: solid rgba(255, 255, 255, 0.493) 1px;
+}
+section.Archives section .Right .Session {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+section.Archives section .Right .Session.Show {
+    display: block;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+#Archives {
+    transition: top 0.3s ease, height 0.3s ease, width 0.3s ease;
+}

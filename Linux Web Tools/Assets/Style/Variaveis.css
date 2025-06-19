@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --Position-Window-Float-Padrao: 50%;
+    --Border-Radius-Window-Padrao: 10px;
+    --Background-Window-Float-Padra: #333;
+    --Width-Window-Float-Padrao: 70vw;
+    --Height-Window-Float-Padrao: 80vh;
+}

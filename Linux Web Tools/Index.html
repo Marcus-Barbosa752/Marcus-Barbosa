@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Assets/Style/Variaveis.css">
+    <link rel="stylesheet" href="Assets/Style/Index.css">
+    <title>Linux Tools</title>
+</head>
+<body>
+    
+    <section id="InsertTools" class="AreaDeTrabalho">
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/trash.png" alt="Lixeira"><span>Lixeira</span></div>
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/pdf.png" alt="Pdf"><span>Pdf</span></div>
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/doc.png" alt="Doc"><span>Doc</span></div>
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/music.png" alt="Audio"><span>Audio</span></div>
+        <div id="BtnOpenArchive" class="CardTools draggable"><img src="Assets/Images/Icon/archive.png" alt="Arquivos"><span>Arquivos</span></div>
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/setting.png" alt="Config"><span>Config.</span></div>
+        <div class="CardTools draggable"><img src="Assets/Images/Icon/txt.png" alt="Txt"><span>Txt</span></div>
+    </section>
+
+    <section class="NavBarTasks">
+        <div class="Left">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="InsertToolsTaskBar" id="InsertToolsTaskBar">
+                <!--<div class="CardToolsTaskBar">
+                    <img src="Assets/Images/Icon/archive.png" alt="">
+                </div>-->
+            </div>
+        </div>
+
+        <div class="Right">
+            <section style="height: 100%; width: auto; display: flex; align-items: center; gap: 10px;">
+                <span id="SpanHoursDate"></span>
+                <span id="SpanCalendario">Calendario</span>
+            </section>
+
+            <button></button>
+        </div>
+    </section>
+
+    <!-- Archive -->
+    <section class="Archives" id="Archives">
+        <header>
+            <div class="Left">
+                <nav>
+                    <button><i class="fa-solid fa-angle-left"></i></button>
+                    <button><i class="fa-solid fa-angle-right"></i></button>
+                </nav>
+            </div>
+
+            <div class="Meio">
+                <div class="CardSerch">
+                    <input type="text" id="InputCaminhoPasta" value="Pasta pessoal" disabled>
+                </div>
+            </div>
+
+            <div class="Right">
+                <button id="BtnMinimizarArchive">_</button>
+                <button id="BtnToggleFullScreenArchive"><i id="ItagExpandArchive" class="fa-solid fa-expand"></i></button>
+                <button id="BtnCloseArchive"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </header>
+
+        <section id="AcoesArchive">
+            <div class="Left">
+                <nav>
+                    <button id="BtnArchive"><i class="fa-solid fa-star"></i>Favoritos</button>
+                    <button id="BtnArchive"><i class="fa-solid fa-house"></i>Pasta pessoal</button>
+                    <button id="BtnArchive"><i class="fa-solid fa-file"></i>Documentos</button>
+                    <button id="BtnArchive"><i class="fa-solid fa-download"></i>Downloads</button>
+                    <section class="Files">
+                        <button id="BtnArchive"><i class="fa-solid fa-file-pdf"></i>Pdf</button>
+                        <button id="BtnArchive"><i class="fa-solid fa-file-word"></i>Doc</button>
+                        <button id="BtnArchive"><i class="fa-solid fa-file-audio"></i>Audio</button>
+                    </section>
+                </nav>
+            </div>
+
+            <div class="Right">
+                <!-- Favoritos -->
+                <section id="Favoritos">Favoritos</section>
+
+                <!-- Pasta pessoal -->
+                <section id="PastaPessoal">
+                    <div class="Card">
+                        m
+                    </div>
+                </section>
+
+                <!-- Documentos -->
+                <section id="Documentos">Documentos</section>
+                
+                <!-- Downloads -->
+                <section id="Downloads">Downloads</section>
+
+                <!-- Pdf -->
+                <section id="Pdf">Pdf</section>
+
+                <!-- Word (doc) -->
+                <section id="Doc">Doc</section>
+
+                <!-- Audio -->
+                <section id="Audio">Audio</section>
+            </div>
+        </section>
+    </section>
+
+    <script src="Assets/Javascript/Index.js"></script>
+    <script src="Assets/Javascript/DragDrop.js"></script>
+    <script src="Assets/Javascript/Date.js"></script>
+    <script src="Assets/Javascript/Nav.js"></script>
+    <script src="Assets/Javascript/SelectBox.js"></script>
+</body>
+</html>
