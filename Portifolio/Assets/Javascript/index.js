@@ -82,7 +82,7 @@ const TemasProjetos = document.querySelector('.TemasProjetos')
 const ListaCategoria = [
     {
         Nome: 'E-commerce',
-        Link: 'https://www.wix.com',
+        Link: 'Assets/Page/Ecommerce.html',
         Background: 'Assets/Images/E-commerce.jpg'
     },
     {
@@ -111,7 +111,7 @@ const CreateCardCatergoria = (Titulo, Link, Fundo) => {
     const Card = `
     <div class="CardTemaProjetos" style="background: url(${Fundo}); background-position: center; background-size: cover;">
         <h4>${Titulo}</h4>
-        <button><a href="${Link}" target="_blank">Acessar</a><i class="fa-solid fa-caret-right"></i></button>
+        <button><a href="${Link}">Acessar</a><i class="fa-solid fa-caret-right"></i></button>
     </div>
     `
 
@@ -166,7 +166,7 @@ const IndicatoSessionSobre = document.getElementById('IndicatoSessionSobre')
 
 const PrintResSobre = document.getElementById('PrintResSobre')
 
-const LinkPdf = 'Assets/Curriculo/Currículo_Pt-BR.pdf'
+const LinkPdf = '/Assets/Curriculo/curriculo_marcus_barbosa_ptbr.pdf'
 
 BtnMarcusSobre.onclick = () => {
     PrintResSobre.innerHTML = ''
