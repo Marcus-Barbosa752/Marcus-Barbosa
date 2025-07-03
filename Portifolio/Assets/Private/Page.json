@@ -1,0 +1,18 @@
+{
+    "Ecommerce": {
+        "Card": [
+            {
+                "Img": "https://agenciafg.com.br/wp-content/uploads/2022/11/vale-a-pena-investir-em-um-app-para-e-commerce_banner-1-1024x438.jpg",
+                "Title": "Produto 1",
+                "Link": "https://www.wix.com",
+                "Sobre": "É aí que entra o aplicativo para e-commerce! Essa ferramenta contribui para uma usabilidade mais fluida, intuitiva e descomplicada em comparação aos navegadores. Além disso, ele pode contribuir com interações com seus clientes em diferentes níveis. Desde atendimento até trocas e resoluções de problemas, orientando-os por todo o processo de jornada de compra."
+            },
+            {
+                "Img": "https://agenciafg.com.br/wp-content/uploads/2022/11/vale-a-pena-investir-em-app-para-e-commerce3_produto.jpg",
+                "Title": "Produto 2",
+                "Link": "https://www.youtube.com",
+                "Sobre": "Então, respondendo à pergunta-chave deste artigo: a resposta, como vimos, é sim! Já que, com um bom aplicativo para e-commerce, a audiência terá mais praticidade na hora da compra. Flexibilidade para acessar de qualquer lugar ou dispositivo e maior segurança com seus dados. Por outro lado, a empresa tende a vender mais e aumentar a base de clientes. Tornando-se mais lucrativa e competitiva no mercado. "
+            }
+        ]
+    }
+}
