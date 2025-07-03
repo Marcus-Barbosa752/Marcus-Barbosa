@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de moedas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Assets/Style/Index.css">
+    <link rel="shortcut icon" href="Assets/Icon/exchange.png" type="image/x-icon">
+</head>
+<body>
+
+    <datalist id="MoedasLista">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="JPY">Iene Japonês (JPY)</option>
+        <option value="GBP">Libra Esterlina (GBP)</option>
+        <option value="AUD">Dólar Australiano (AUD)</option>
+        <option value="CAD">Dólar Canadense (CAD)</option>
+        <option value="CHF">Franco Suíço (CHF)</option>
+        <option value="CNY">Yuan Chinês (CNY)</option>
+        <option value="INR">Rúpia Indiana (INR)</option>
+        <option value="MXN">Peso Mexicano (MXN)</option>
+        <option value="NZD">Dólar Neozelandês (NZD)</option>
+        <option value="RUB">Rublo Russo (RUB)</option>
+        <option value="ZAR">Rand Sul-Africano (ZAR)</option>
+        <option value="SGD">Dólar de Singapura (SGD)</option>
+        <option value="HKD">Dólar de Hong Kong (HKD)</option>
+        <option value="SEK">Coroa Sueca (SEK)</option>
+        <option value="NOK">Coroa Norueguesa (NOK)</option>
+        <option value="DKK">Coroa Dinamarquesa (DKK)</option>
+        <option value="PLN">Zloty Polonês (PLN)</option>
+        <option value="THB">Baht Tailandês (THB)</option>
+        <option value="MYR">Ringgit Malaio (MYR)</option>
+        <option value="IDR">Rúpia Indonésia (IDR)</option>
+        <option value="PHP">Peso Filipino (PHP)</option>
+        <option value="AED">Dirham dos Emirados Árabes Unidos (AED)</option>
+        <option value="ARS">Peso Argentino (ARS)</option>
+        <option value="BRL">Real Brasileiro (BRL)</option>
+        <option value="CLP">Peso Chileno (CLP)</option>
+        <option value="COP">Peso Colombiano (COP)</option>
+        <option value="PEN">Novo Sol Peruano (PEN)</option>
+        <option value="VND">Dong Vietnamita (VND)</option>
+        <option value="TWD">Dólar Novo Taiwanês (TWD)</option>
+        <option value="CZK">Coroa Checa (CZK)</option>
+        <option value="HUF">Florim Húngaro (HUF)</option>
+        <option value="ILS">Novo Shekel Israelense (ILS)</option>
+        <option value="HRK">Coroa Croata (HRK)</option>
+        <option value="RSD">Dinar Sérvio (RSD)</option>
+        <option value="BGN">Lev Búlgaro (BGN)</option>
+    </datalist>
+
+    <section class="Root">
+        <!-- Comparação de moedas -->
+        <form id="Form">
+            <input type="text" id="InputMoedaUm" placeholder="1 Moeda" list="MoedasLista" autocomplete="off">
+            <i class="fa-solid fa-coins"></i>
+            <input type="text" id="InputMoedaDois" placeholder="2 Moeda" list="MoedasLista" autocomplete="off">
+
+            <div class="Controls">
+                <button id="BtnObterCotacao">Obter cotação</button>
+                <button id="BtnCalcCotacoes">Calculadora</button>
+            </div>
+        </form>
+
+        <!-- Resultado da comparação -->
+        <section class="Result" id="Result">
+            <div class="PrintValorAtual">
+                <span id="SpanPrintValorAtual">00.00</span>
+            </div>
+
+            <button id="BtnBackCotacao"><i class="fa-solid fa-angle-left"></i>Voltar</button>
+
+            <div class="ResultInfo" id="ResultInfo"></div>
+        </section>
+
+        <!-- Calculadora de moedas -->
+        <section class="CalcMoedas" id="CalcMoedas">
+            <i id="BtnBackHome" class="fa-solid fa-angle-left"></i>
+
+            <div class="Visor">
+                <div class="Left">
+                    <span id="SpanResultCalcMoedas">00</span>
+                    <span id="SpanPreviaCalcMoedas">00+00</span>
+                </div>
+
+                <div class="Right">
+                    <span id="SpanMoedaPadrao">00.00</span>
+                </div>
+            </div>
+
+            <form class="InputsCalc">
+                <input type="text" id="InputMoedaUmCalc" placeholder="EX: BRL" list="MoedasLista">
+                <i id="BtnReverterMoeda" class="fa-solid fa-repeat"></i>
+                <input type="text" id="InputMoedaDoisCalc" placeholder="EX: USD" list="MoedasLista">
+            </form>
+
+            <section class="SubTecladoCal">
+                <button onclick="Clean()">C</button>
+                <button onclick="Pocentagem()">%</button>
+                <button onclick="BackSpace()"><i class="fa-solid fa-delete-left"></i></button>
+            </section>
+
+            <section class="TecladoCalc">
+                <div>
+                    <button onclick="Insert('7')">7</button>
+                    <button onclick="Insert('8')">8</button>
+                    <button onclick="Insert('9')">9</button>
+                    <button onclick="Insert('x')">x</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('4')">4</button>
+                    <button onclick="Insert('5')">5</button>
+                    <button onclick="Insert('6')">6</button>
+                    <button onclick="Insert('-')">-</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('1')">1</button>
+                    <button onclick="Insert('2')">2</button>
+                    <button onclick="Insert('3')">3</button>
+                    <button onclick="Insert('+')">+</button>
+                </div>
+
+                <div>
+                    <button onclick="Insert('0')">0</button>
+                    <button onclick="Insert('00')">00</button>
+                    <button onclick="Insert('.')">.</button>
+                    <button onclick="Calc()">=</button>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <script src="Assets/Javascript/Index.js"></script>
+</body>
+
+</html>
